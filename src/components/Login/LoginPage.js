@@ -35,8 +35,8 @@ export const LoginPage = () => {
 				})
 				.then((res) => {
 					if (typeof res.data !== "undefined") {
-						localStorage.setItem("token", res.data.token);
-						localStorage.setItem("userId", res.data.id);
+						localStorage.setItem("token", res?.data?.token);
+						localStorage.setItem("userId", res?.data?.id);
 						navigate("/shop");
 						toast.success("Successfully logged in");
 					}
